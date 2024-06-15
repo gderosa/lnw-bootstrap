@@ -4,12 +4,14 @@ DEBIAN_BOX    = 'boxomatic/debian-13'
 RAM_MB        = 1024
 MESSAGE       = <<END
   ssh -p 2201 lnw@localhost
-  ssh -p 2202 lnw@localhost  # lnwb, optional
+  ssh -p 2202 lnw@localhost # lnwb, optional
   cd /opt/lnw
   source /var/lib/lnw/.virtualenvs/lnw/bin/activate
   fastapi dev --host 0.0.0.0 api/fast/main.py
   http://localhost:8001
-  http://localhost:8002
+  http://localhost:8002     # lnwb, optional
+
+  # Note vagrant user (full sudoer) still active.
 END
 
 def assign_ram(vmcfg, megabytes)
