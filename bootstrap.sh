@@ -18,3 +18,4 @@ git clone https://github.com/$GHUSER/$REPONAME.git
 cd $REPONAME
 
 sh scripts/setup.sh
+
