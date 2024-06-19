@@ -10,7 +10,6 @@ dpkg --configure -a
 apt-get -f install
 apt-get -y update
 apt-get -y upgrade
-apt-get -y autoremove
 apt-get -y install git-core
 
 cd /opt

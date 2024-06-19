@@ -3,8 +3,8 @@
 DEBIAN_BOX    = 'boxomatic/debian-13'
 RAM_MB        = 1024
 MESSAGE       = <<END
-  ssh -p 2201 lnw@localhost
-  ssh -p 2202 lnw@localhost # lnwb, optional
+  ssh -p 2201 lnw@localhost # password: pass
+  ssh -p 2202 lnw@localhost # lnwb, optional downstream machine
   cd /opt/lnw
   source /var/lib/lnw/.virtualenvs/lnw/bin/activate
   fastapi dev --host 0.0.0.0 api/fast/main.py
