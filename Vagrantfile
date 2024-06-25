@@ -7,9 +7,10 @@ RAM_MB        = 1024
 MESSAGE       = <<END
   ssh -p 2201 lnw@localhost # main lnw VM: default password: pass
   ssh -p 2202 lnw@localhost # lnwb: a second lnw, optional, downstream VM
+
   cd /opt/lnw
-  source /var/lib/lnw/.virtualenvs/lnw/bin/activate
-  fastapi dev --host 0.0.0.0 api/fast/main.py
+  source scripts/start.sh
+
   http://localhost:8001
   http://localhost:8002     # lnwb, optional
 
