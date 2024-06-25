@@ -8,8 +8,8 @@ MESSAGE       = <<END
   ssh -p 2201 lnw@localhost # main lnw VM: default password: pass
   ssh -p 2202 lnw@localhost # lnwb: a second lnw, optional, downstream VM
 
-  cd /opt/lnw
-  source scripts/start.sh
+  cd /opt/lnw               # point your editor ssh plugin to this folder (or mount sshfs etc.)
+  ./scripts/start.sh
 
   http://localhost:8001
   http://localhost:8002     # lnwb, optional
