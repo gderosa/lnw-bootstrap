@@ -3,7 +3,7 @@
 # Inspired by https://github.com/vemarsas/wiedii-bootstrap/blob/main/Vagrantfile
 
 DEBIAN_BOX    = 'boxomatic/debian-13'
-RAM_MB        = 1024
+RAM_MB        = 2048
 MESSAGE       = <<END
   ssh -p 2201 lnw@localhost # main lnw VM: default password: pass
   ssh -p 2202 lnw@localhost # lnwb: a second lnw, optional, downstream VM
