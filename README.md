@@ -1,5 +1,3 @@
-**Possibly abandoned.**
-
 # Setup LNW
 
 ## Vagrant
