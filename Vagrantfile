@@ -36,7 +36,7 @@ Vagrant.configure('2') do |config|
 
   assign_ram                  config,   RAM_MB
 
-  config.vm.provision         'shell',  path:   'bootstrap.sh'
+  config.vm.provision         'shell',  path:   'kickoff.sh'
   config.vm.provision         'file',   source: 'files/sshd_config',  destination: '/tmp/sshd_config_lnw'
   config.vm.provision         'shell',  inline: 'mv -v /tmp/sshd_config_lnw /etc/ssh/sshd_config.d/lnw.conf'
   config.vm.provision         'shell',  inline: 'chmod -x /etc/ssh/sshd_config.d/lnw.conf'
