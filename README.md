@@ -16,7 +16,7 @@ Install Debian 13 (trixie).
 
 Run the script `kickoff.sh`.
 
-A user `lnw` with password `pass` will be created. App will be in `/opt/lnw`.
+A user `lnw` with password `lnw` will be created. App will be in `/opt/lnw`.
 
 Then, start with
 
