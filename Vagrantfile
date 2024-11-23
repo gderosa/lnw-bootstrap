@@ -15,6 +15,10 @@ MESSAGE       = <<END
   http://localhost:8002     # lnwb, optional
 
   # Note vagrant user (full sudoer) still active.
+
+  You can also use VSCode remotely over SSH this way:
+
+  code --folder-uri "vscode-remote://ssh-remote+lnw@localhost:2201/opt/lnw"
 END
 
 def assign_ram(vmcfg, megabytes)
