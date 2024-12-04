@@ -25,11 +25,11 @@ cd /opt/lnw
 ./scripts/start.sh  # if not already running as a service
 ```
 
-## Environment variables (both physical and VM)
+## Optional: environment variables (both physical and VM)
 
-`BRANCH`: will checkout the particular Git branch in the machine.
+`BRANCH`: will checkout the particular Git branch in the machine (instead of the default).
 
-With Vagrant, from a host with Bash-like shell, typycally Linux or macOS:
+With Vagrant, from a host with Bash-like shell (typycally Linux or macOS):
 ```
 BRANCH=mybranch vagrant up --provision
 ```
@@ -37,5 +37,6 @@ BRANCH=mybranch vagrant up --provision
 Or (directly in the machine, possibly physical):
 
 ```
-BRANCH=mybranch kickoff.sh
+export BRANCH=mybranch
+bash ./kickoff.sh
 ```
