@@ -18,8 +18,9 @@ apt-get -y install git-core
 cd /opt
 git clone https://github.com/$GHUSER/$REPONAME.git
 cd $REPONAME
-# BRANCH might be passed as env variable
-if [ -z "$BRANCH" ]; then
+# BRANCH might be passed as env variable, checkout to it if var is not empty
+if [ ! -z "$BRANCH" ]; then
+    echo "Checking out branch $BRANCH"
     git checkout $BRANCH
 fi
 
