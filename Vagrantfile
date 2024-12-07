@@ -16,9 +16,12 @@ MESSAGE       = <<END
 
   # Note vagrant user (full sudoer) still active.
 
-  You can also use VSCode remotely over SSH this way:
+  You can also use VSCode remotely over SSH this way (example first VM):
 
   code --folder-uri "vscode-remote://ssh-remote+lnw@localhost:2201/opt/lnw"
+
+  You might want to manually change MAC address of first ethernet to prevent conflict between VMs.
+  (Virtualbox apparently does not give you control of this setting the first/default network interface).
 END
 
 def assign_ram(vmcfg, megabytes)
@@ -74,10 +77,9 @@ Vagrant.configure('2') do |config|
   config.vm.define 'lnwb', autostart: false do |lnwb|
     lnwb.vm.hostname = 'lnwb'
 
-    # lnwb.vm.network "forwarded_port", guest: 22,   host: 2202
-    lnwb.vm.network 'forwarded_port', guest: 8000, host: 8002
-
     # NIC #1
+    lnwb.vm.network "forwarded_port", guest: 22,   host: 2202
+    lnwb.vm.network 'forwarded_port', guest: 8000, host: 8002
 
     # NIC #2  Connected to the other network appliance
     lnwb.vm.network 'private_network',
