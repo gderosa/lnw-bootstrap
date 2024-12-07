@@ -77,9 +77,7 @@ Vagrant.configure('2') do |config|
     # lnwb.vm.network "forwarded_port", guest: 22,   host: 2202
     lnwb.vm.network 'forwarded_port', guest: 8000, host: 8002
 
-    # NIC #1 is the default NAT interface, with forwarded ports above, connected to host machine
-    lnwb.vm.network "public_network",
-        use_dhcp_assigned_default_route: true
+    # NIC #1
 
     # NIC #2  Connected to the other network appliance
     lnwb.vm.network 'private_network',
